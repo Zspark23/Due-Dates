@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>48D808DD-DA2A-4322-AD40-EE0339D236D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>548DD2BD462B52E2AB812572642DE6304F19A32D</key>
+		<string>https://github.com/Zspark23/Due-Dates.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Due Dates.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>548DD2BD462B52E2AB812572642DE6304F19A32D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Zspark23/Due-Dates.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>548DD2BD462B52E2AB812572642DE6304F19A32D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>548DD2BD462B52E2AB812572642DE6304F19A32D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Due%20Dates</string>
+		</dict>
+	</array>
+</dict>
+</plist>

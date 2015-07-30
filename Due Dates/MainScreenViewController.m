@@ -7,8 +7,11 @@
 //
 
 #import "MainScreenViewController.h"
+#import "MainScreenTableViewDataSource.h"
 
 @interface MainScreenViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -22,6 +25,38 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"viewCategory"])
+    {
+        UITableViewCell *cellThatWasTapped = sender;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
+        
+        NSString *titleOfNextVC = [MainScreenTableViewDataSource categories][indexPath.row];
+        
+        ((UIViewController *)segue.destinationViewController).title = titleOfNextVC;
+    }else if ([segue.identifier isEqualToString:@"newEntry"])
+    {
+        UITableViewCell *cellThatWasTapped = sender;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
+        
+        NSString *titleOfNextVC = [MainScreenTableViewDataSource categories][indexPath.row];
+        
+        ((UIViewController *)segue.destinationViewController).title = titleOfNextVC;
+    }else if ([segue.identifier isEqualToString:@"viewStatistics"])
+    {
+        UITableViewCell *cellThatWasTapped = sender;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
+        
+        NSString *titleOfNextVC = [MainScreenTableViewDataSource categories][indexPath.row];
+        
+        ((UIViewController *)segue.destinationViewController).title = titleOfNextVC;
+    }
 }
 
 @end
