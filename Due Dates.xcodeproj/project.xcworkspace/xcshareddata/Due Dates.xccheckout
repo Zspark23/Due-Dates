@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>48D808DD-DA2A-4322-AD40-EE0339D236D7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Due Dates</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>548DD2BD462B52E2AB812572642DE6304F19A32D</key>
 		<string>https://github.com/Zspark23/Due-Dates.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Due Dates.xcodeproj/project.xcworkspace</string>
+	<string>Due Dates.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>548DD2BD462B52E2AB812572642DE6304F19A32D</key>

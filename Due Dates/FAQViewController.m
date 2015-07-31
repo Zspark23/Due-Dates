@@ -27,14 +27,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ //In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UITableViewCell *cellThatWasTapped = sender;
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cellThatWasTapped];
+    
+    NSString *titleOfNextVC = [FAQs questionTypeAtIndex:indexPath.section inQuestionAtIndex:indexPath.row];
+    NSString *questionAnswer = [FAQs questionTypeAtIndex:indexPath.section withAnswerAtIndex:indexPath.row];
+    
+    FAQDetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.title = @"FAQ's";
+    detailViewController.titleString = titleOfNextVC;
+    detailViewController.answerString = questionAnswer;
 }
-*/
+
 
 @end

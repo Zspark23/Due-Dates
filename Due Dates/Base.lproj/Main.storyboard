@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8XK-86-cCi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Due Dates-->
@@ -137,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52b-Up-jTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="991"/>
+            <point key="canvasLocation" x="1009" y="991"/>
         </scene>
         <!--FAQ View Controller-->
         <scene sceneID="BXQ-yS-X3d">
@@ -151,7 +152,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="D7k-y9-X6B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="D7k-y9-X6B">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -160,6 +161,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JlQ-l8-dVh" id="pHT-FV-hqj">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ekg-20-cIm" kind="show" id="Fwl-T9-64T"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -183,6 +187,57 @@
                 <customObject id="cfJ-wI-enU" customClass="FAQTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1712" y="991"/>
+        </scene>
+        <!--FAQ's-->
+        <scene sceneID="3lW-39-35i">
+            <objects>
+                <viewController id="ekg-20-cIm" customClass="FAQDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IO0-Dk-CTn"/>
+                        <viewControllerLayoutGuide type="bottom" id="one-R2-HqN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1dX-pJ-NAr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-io-UB5">
+                                <rect key="frame" x="16" y="72" width="568" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="WEA-Cn-9tv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-4v-yda">
+                                <rect key="frame" x="16" y="155" width="568" height="425"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YKe-4v-yda" firstAttribute="top" secondItem="6Pd-io-UB5" secondAttribute="bottom" constant="8" symbolic="YES" id="DEZ-JN-kBt"/>
+                            <constraint firstItem="6Pd-io-UB5" firstAttribute="leading" secondItem="YKe-4v-yda" secondAttribute="leading" id="F40-nk-r2H"/>
+                            <constraint firstItem="6Pd-io-UB5" firstAttribute="trailing" secondItem="YKe-4v-yda" secondAttribute="trailing" id="XiQ-V3-VCa"/>
+                            <constraint firstItem="6Pd-io-UB5" firstAttribute="top" secondItem="IO0-Dk-CTn" secondAttribute="bottom" constant="8" symbolic="YES" id="f8U-XF-Qku"/>
+                            <constraint firstAttribute="bottom" secondItem="YKe-4v-yda" secondAttribute="bottom" constant="20" symbolic="YES" id="i6P-8U-bsY"/>
+                            <constraint firstItem="YKe-4v-yda" firstAttribute="trailing" secondItem="1dX-pJ-NAr" secondAttribute="trailingMargin" id="oyJ-d6-Qwp"/>
+                            <constraint firstItem="6Pd-io-UB5" firstAttribute="leading" secondItem="1dX-pJ-NAr" secondAttribute="leadingMargin" id="yba-lb-SDv"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="FAQ's" id="fuk-86-Y7O"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="questionAnswerLabel" destination="YKe-4v-yda" id="RWG-8c-rHB"/>
+                        <outlet property="questionTitleLabel" destination="6Pd-io-UB5" id="O8c-Ty-2Y7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sY-uu-WRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="1687"/>
         </scene>
         <!--Statistics View Controller-->
         <scene sceneID="KaT-1m-nZS">
@@ -222,7 +277,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FAQ" width="32" height="32"/>
-        <image name="settings" width="32" height="32"/>
+        <image name="FAQ" width="28" height="28"/>
+        <image name="settings" width="28" height="28"/>
     </resources>
 </document>

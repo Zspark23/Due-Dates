@@ -16,7 +16,7 @@
 
 + (NSString *)questionTypeAtIndex:(NSInteger)ingIndex inQuestionAtIndex:(NSInteger)recIndex;
 
-+ (NSString *)questionAtIndex:(NSInteger)index;
++ (NSString *)questionTypeAtIndex:(NSInteger)ingIndex withAnswerAtIndex:(NSInteger)recIndex;
 
 + (NSInteger)questionsCountAtIndex:(NSInteger)index;
 
